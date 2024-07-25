@@ -14,6 +14,24 @@ class ViewController: UIViewController {
         
         view?.backgroundColor = UIColor.cyan
         
+        let charactersApi = CharactersAPI()
+        charactersApi.fetchCharacters { response in
+            switch response {
+            case .success(let result):
+                if result.data.isEmpty {
+                    print("No results")
+                } else {
+                    let charactersList = result.data
+                    charactersList.forEach({ character in
+                        print("\(character.name): \(character.imageUrl ?? "Empty url")")
+                    })
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+            
+        }
+        
     }
 
 

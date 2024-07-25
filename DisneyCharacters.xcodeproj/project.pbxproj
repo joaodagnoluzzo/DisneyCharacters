@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283273002C51D4D20020FEAE /* CharactersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272FF2C51D4D20020FEAE /* CharactersAPI.swift */; };
+		283273032C51DA570020FEAE /* CharactersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283273022C51DA570020FEAE /* CharactersResult.swift */; };
 		28AA83BF2C51B76700749850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA83BE2C51B76700749850 /* AppDelegate.swift */; };
 		28AA83C12C51B76700749850 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA83C02C51B76700749850 /* SceneDelegate.swift */; };
 		28AA83C32C51B76700749850 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA83C22C51B76700749850 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		283272FF2C51D4D20020FEAE /* CharactersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPI.swift; sourceTree = "<group>"; };
+		283273022C51DA570020FEAE /* CharactersResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersResult.swift; sourceTree = "<group>"; };
 		28AA83BB2C51B76700749850 /* DisneyCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28AA83BE2C51B76700749850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28AA83C02C51B76700749850 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		283272FE2C51D48F0020FEAE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				283272FF2C51D4D20020FEAE /* CharactersAPI.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		283273012C51DA1C0020FEAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				283273022C51DA570020FEAE /* CharactersResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		28AA83B22C51B76700749850 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +119,8 @@
 		28AA83BD2C51B76700749850 /* DisneyCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				283273012C51DA1C0020FEAE /* Model */,
+				283272FE2C51D48F0020FEAE /* Repository */,
 				28AA83BE2C51B76700749850 /* AppDelegate.swift */,
 				28AA83C02C51B76700749850 /* SceneDelegate.swift */,
 				28AA83C22C51B76700749850 /* ViewController.swift */,
@@ -260,7 +282,9 @@
 				28AA83C32C51B76700749850 /* ViewController.swift in Sources */,
 				28AA83C92C51B76700749850 /* DisneyCharacters.xcdatamodeld in Sources */,
 				28AA83BF2C51B76700749850 /* AppDelegate.swift in Sources */,
+				283273032C51DA570020FEAE /* CharactersResult.swift in Sources */,
 				28AA83C12C51B76700749850 /* SceneDelegate.swift in Sources */,
+				283273002C51D4D20020FEAE /* CharactersAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
