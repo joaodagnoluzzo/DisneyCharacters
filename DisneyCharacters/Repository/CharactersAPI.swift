@@ -7,25 +7,16 @@
 
 import Foundation
 
-
 final class CharactersAPI {
     
     private let baseUrl = "https://api.disneyapi.dev"
     private let session = URLSession.shared
     
-    func fetchCharacters(completion: @escaping (Result<CharactersResult, Error>) -> Void) {
-        
+    func fetchCharactersAsync(completion: @escaping (Result<CharactersResult, Error>) -> Void) {
         let requestHttp = "\(baseUrl)/character"
-        print(requestHttp)
         guard let requestUrl = URL(string: requestHttp) else { return }
         
-        let aux = self.session.dataTask(with: requestUrl) { data, response, error in
-            
-        }
-        
-        aux.resume()
-        
-        let task = self.session.dataTask(with: requestUrl) { data, response, error in
+        self.session.dataTask(with: requestUrl) { data, response, error in
             if let error = error {
                 completion(.failure(error))
             }
@@ -33,9 +24,32 @@ final class CharactersAPI {
             if let data = data {
                 completion(.success(self.decodeCharacters(data:data)))
             }
-        }
-        task.resume()
+        }.resume()
         
+    }
+    
+    func fetchCharactersSync() -> [DisneyCharacter] {
+        var result = CharactersResult()
+        let requestHttp = "\(baseUrl)/character"
+        
+        guard let requestUrl = URL(string: requestHttp) else { return [] }
+        
+        var data: Data?
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        self.session.dataTask(with: requestUrl) { resultData, response, resultError in
+            data = resultData
+            
+            semaphore.signal()
+        }.resume()
+        
+        semaphore.wait()
+        
+        if let data = data {
+            result = self.decodeCharacters(data: data)
+        }
+        
+        return result.data
     }
     
     private func decodeCharacters(data: Data) -> CharactersResult {
@@ -47,6 +61,19 @@ final class CharactersAPI {
             print("JSON Decoding Error: \(error)")
         }
         return result;
+    }
+    
+    func fetchCharacterImageData(url: URL, completion: @escaping (Data?) -> Void) {
+        self.session.dataTask(with: url) { data, response, error in
+            
+            guard let data = data, error == nil else {
+                completion(nil)
+                return
+            }
+            
+            completion(data)
+            
+        }.resume()
     }
     
     

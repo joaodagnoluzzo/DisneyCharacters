@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		283273002C51D4D20020FEAE /* CharactersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272FF2C51D4D20020FEAE /* CharactersAPI.swift */; };
 		283273032C51DA570020FEAE /* CharactersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283273022C51DA570020FEAE /* CharactersResult.swift */; };
+		2854BB9C2C5308AB000A04A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854BB9B2C5308AB000A04A6 /* HomeView.swift */; };
 		28AA83BF2C51B76700749850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA83BE2C51B76700749850 /* AppDelegate.swift */; };
 		28AA83C12C51B76700749850 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA83C02C51B76700749850 /* SceneDelegate.swift */; };
-		28AA83C32C51B76700749850 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA83C22C51B76700749850 /* ViewController.swift */; };
+		28AA83C32C51B76700749850 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA83C22C51B76700749850 /* HomeViewController.swift */; };
 		28AA83C92C51B76700749850 /* DisneyCharacters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28AA83C72C51B76700749850 /* DisneyCharacters.xcdatamodeld */; };
 		28AA83CB2C51B76A00749850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28AA83CA2C51B76A00749850 /* Assets.xcassets */; };
 		28AA83CE2C51B76A00749850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28AA83CC2C51B76A00749850 /* LaunchScreen.storyboard */; };
@@ -40,10 +41,11 @@
 /* Begin PBXFileReference section */
 		283272FF2C51D4D20020FEAE /* CharactersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPI.swift; sourceTree = "<group>"; };
 		283273022C51DA570020FEAE /* CharactersResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersResult.swift; sourceTree = "<group>"; };
+		2854BB9B2C5308AB000A04A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		28AA83BB2C51B76700749850 /* DisneyCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28AA83BE2C51B76700749850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28AA83C02C51B76700749850 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		28AA83C22C51B76700749850 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28AA83C22C51B76700749850 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		28AA83C82C51B76700749850 /* DisneyCharacters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DisneyCharacters.xcdatamodel; sourceTree = "<group>"; };
 		28AA83CA2C51B76A00749850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28AA83CD2C51B76A00749850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,9 +123,10 @@
 			children = (
 				283273012C51DA1C0020FEAE /* Model */,
 				283272FE2C51D48F0020FEAE /* Repository */,
+				2854BB9B2C5308AB000A04A6 /* HomeView.swift */,
+				28AA83C22C51B76700749850 /* HomeViewController.swift */,
 				28AA83BE2C51B76700749850 /* AppDelegate.swift */,
 				28AA83C02C51B76700749850 /* SceneDelegate.swift */,
-				28AA83C22C51B76700749850 /* ViewController.swift */,
 				28AA83CA2C51B76A00749850 /* Assets.xcassets */,
 				28AA83CC2C51B76A00749850 /* LaunchScreen.storyboard */,
 				28AA83CF2C51B76A00749850 /* Info.plist */,
@@ -279,7 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AA83C32C51B76700749850 /* ViewController.swift in Sources */,
+				28AA83C32C51B76700749850 /* HomeViewController.swift in Sources */,
+				2854BB9C2C5308AB000A04A6 /* HomeView.swift in Sources */,
 				28AA83C92C51B76700749850 /* DisneyCharacters.xcdatamodeld in Sources */,
 				28AA83BF2C51B76700749850 /* AppDelegate.swift in Sources */,
 				283273032C51DA570020FEAE /* CharactersResult.swift in Sources */,
